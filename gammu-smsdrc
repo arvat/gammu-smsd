@@ -1,0 +1,20 @@
+[gammu]
+port = /dev/ttyUSB0
+connection = at19200
+model = at
+synchronizetime = yes
+logfile = /var/log/gammu-core.log
+logformat = errorsdate
+gammucoding = utf8
+
+[smsd]
+Service = files
+CheckSecurity = 0
+LogFile = /var/log/gammu.log
+InboxPath = /var/log/gammu/inbox/
+OutboxPath = /var/log/gammu/outbox/
+SentSMSPath = /var/log/gammu/sent/
+ErrorSMSPath = /var/log/gammu/error/
+DebugLevel = 1
+RunOnReceive = /root/receive_sms.sh
+CheckBattery = 0
